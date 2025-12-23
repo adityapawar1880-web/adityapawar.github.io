@@ -1,0 +1,557 @@
+/*
+ * Portfolio stylesheet for Aditya Pawar
+ *
+ * The design uses a soft pastel palette recommended for modern websites and portfolio designs in 2025, combining Double Pearl Lusta, Perfume, Mauve, Gorse, white and neutral grey tones【984210811904061†L200-L210】. These colours provide high contrast while maintaining a light, sophisticated feel.
+ */
+
+/* Global variables */
+:root {
+  --primary: #B4A2F6;      /* Perfume – pastel lavender */
+  --secondary: #F9FBC3;    /* Double Pearl Lusta – soft yellow */
+  --accent: #ECAAFB;       /* Mauve – gentle pink */
+  --highlight: #FCE54D;    /* Gorse – vivid yellow for calls to action */
+  --text: #333333;         /* Dark grey for readability */
+  --muted: #777777;        /* Medium grey for secondary text */
+  --background: #FFFFFF;   /* White background for clarity */
+  --shadow: rgba(0, 0, 0, 0.05);
+}
+
+/* Base styling */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  margin: 0 0 0.5rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.section {
+  padding: 4rem 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 3rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--highlight);
+  color: var(--text);
+}
+
+.btn-primary:hover {
+  background-color: var(--accent);
+  color: var(--text);
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  background-color: var(--primary);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 6px var(--shadow);
+}
+
+.navbar .brand {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 0.75rem;
+  border-radius: 2rem;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  background-color: var(--accent);
+  color: var(--text);
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 0;
+  background-color: var(--secondary);
+  border-bottom: 1px solid var(--shadow);
+}
+
+.hero-content {
+  flex: 1 1 400px;
+  padding: 1rem;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+.hero-content p {
+  max-width: 500px;
+  margin-bottom: 1.5rem;
+  color: var(--text);
+}
+
+.hero-image {
+  flex: 1 1 400px;
+  text-align: center;
+  padding: 1rem;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* About Section */
+.about p {
+  max-width: 800px;
+  margin: 0 auto 1rem;
+  text-align: center;
+}
+
+.about-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.highlight {
+  flex: 1 1 250px;
+  background-color: var(--background);
+  border: 1px solid var(--secondary);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 4px var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.highlight:hover {
+  transform: translateY(-5px);
+}
+
+.highlight i {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.highlight h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  margin: 2rem 0;
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 25px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: var(--primary);
+  border-radius: 2px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+  padding-left: 2.5rem;
+}
+
+.timeline-icon {
+  position: absolute;
+  left: -3px;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--accent);
+  color: var(--background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  box-shadow: 0 2px 4px var(--shadow);
+}
+
+.timeline-content {
+  background-color: var(--background);
+  border: 1px solid var(--secondary);
+  border-radius: 1rem;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 2px 4px var(--shadow);
+}
+
+.timeline-content h3 {
+  margin-top: 0;
+  color: var(--primary);
+}
+
+.timeline-content .time {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+
+.timeline-content ul {
+  margin: 0;
+  padding-left: 1rem;
+}
+
+.timeline-content li {
+  margin-bottom: 0.5rem;
+}
+
+/* Skills */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.skill-card {
+  background-color: var(--background);
+  border: 1px solid var(--secondary);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 4px var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+}
+
+.skill-card i {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.skill-card h3 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+/* Projects */
+.projects .project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background-color: var(--background);
+  border: 1px solid var(--secondary);
+  border-radius: 1rem;
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 4px var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card .project-icon {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.project-card h3 {
+  color: var(--primary);
+  margin: 1rem 1rem 0.5rem;
+}
+
+.project-card p {
+  color: var(--text);
+  font-size: 0.95rem;
+  margin: 0 1rem 1.5rem;
+}
+
+/* Project Card Images */
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Education */
+.education-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.education-item {
+  background-color: var(--background);
+  border: 1px solid var(--secondary);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px var(--shadow);
+}
+
+.education-item .degree {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.education-item .institution {
+  font-weight: 500;
+  margin: 0.25rem 0;
+}
+
+.education-item .time {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+
+/* Achievements */
+.achievements-list {
+  list-style: none;
+  padding-left: 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.achievements-list li {
+  background-color: var(--background);
+  border: 1px solid var(--secondary);
+  border-radius: 1rem;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.achievements-list li:hover {
+  transform: translateY(-4px);
+}
+
+.achievements-list strong {
+  color: var(--primary);
+}
+
+/* Contact */
+.contact {
+  text-align: center;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.contact-link {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--primary);
+  border-radius: 2rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-link i {
+  font-size: 1rem;
+}
+
+.contact-link:hover {
+  background-color: var(--primary);
+  color: var(--background);
+}
+
+/* Footer */
+.footer {
+  background-color: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Project detail pages */
+.project-hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--secondary);
+  padding: 4rem 1.5rem;
+  border-bottom: 1px solid var(--shadow);
+}
+
+.project-hero img {
+  flex: 1 1 400px;
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  margin-right: 2rem;
+}
+
+.project-hero-text {
+  flex: 1 1 400px;
+  max-width: 500px;
+  color: var(--text);
+}
+
+.project-hero-text h1 {
+  color: var(--primary);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.project-hero-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.project-details {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+.project-details h2 {
+  color: var(--primary);
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.75rem;
+}
+
+.project-details p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.project-details ul {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.project-details li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .project-hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .project-hero img {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+  .project-hero-text {
+    text-align: center;
+  }
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-content, .hero-image {
+    flex: 1 1 100%;
+  }
+  .timeline::before {
+    left: 20px;
+  }
+  .timeline-icon {
+    left: -7px;
+  }
+  .timeline-item {
+    padding-left: 2rem;
+  }
+}
